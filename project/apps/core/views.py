@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import University, Student
-from .serializers import UniversitySerializer, StudentSerializer
+from .models import University, Student, Class
+from .serializers import UniversitySerializer, StudentSerializer, ClassSerializer
 
 
 class StudentViewSet(viewsets.ModelViewSet):
@@ -11,3 +11,8 @@ class StudentViewSet(viewsets.ModelViewSet):
 class UniversityViewSet(viewsets.ModelViewSet):
     queryset = University.objects.all()
     serializer_class = UniversitySerializer
+
+
+class ClassViewSet(viewsets.ModelViewSet):
+    queryset = Class.objects.all()
+    serializer_class = ClassSerializer
