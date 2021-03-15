@@ -7,8 +7,4 @@ router = routers.DefaultRouter()
 router.register(r'students', StudentViewSet)
 router.register(r'universities', UniversityViewSet)
 
-urlpatterns = [
-    url(r'^docs/', include('rest_framework_swagger.urls')),
-]
-urlpatterns += router.urls
-
+urlpatterns = router.urls
